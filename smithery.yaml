@@ -1,0 +1,25 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['server.py'],
+      env: {
+        TRIPADVISOR_API_KEY: config.tripadvisorApiKey
+      }
+    })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - tripadvisorApiKey
+    properties:
+      tripadvisorApiKey:
+        type: string
+        description: TripAdvisor API key for authentication
+  exampleConfig:
+    tripadvisorApiKey: YOUR_TRIPADVISOR_API_KEY_HERE
