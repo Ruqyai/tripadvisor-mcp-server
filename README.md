@@ -1,4 +1,5 @@
 # TripAdvisor Vacation Planner MCP Server
+[![smithery badge](https://smithery.ai/badge/@Ruqyai/tripadvisor-mcp-server)](https://smithery.ai/server/@Ruqyai/tripadvisor-mcp-server)
 
 This MCP server provides access to TripAdvisor data for planning vacations, finding attractions, restaurants, and hotels.
 
@@ -19,6 +20,14 @@ This MCP server provides access to TripAdvisor data for planning vacations, find
 - TripAdvisor API key (get one from [TripAdvisor Developer Portal](https://developer.tripadvisor.com/))
 - Claude Desktop
 - Google Maps MCP Server (https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps)
+
+### Installing via Smithery
+
+To install tripadvisor-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Ruqyai/tripadvisor-mcp-server):
+
+```bash
+npx -y @smithery/cli install @Ruqyai/tripadvisor-mcp-server --client claude
+```
 
 ### Installation with uv
 
